@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Альбомы{% endblock %}
+
+
+{% block content %}
+
+    <div class="album__block">
+        <div class="album__block_content">
+            <h2 class="title__center">{{ albums.name }}</h2>
+            <img src="{{ albums.cover.url }}" class="album_cover" alt="">
+        </div>
+    </div>
+    <div class="block__tracks">
+    {% for item in albums.tracks.all %}
+        <h2>{{ item.title }}</h2>
+        <img src="{{ item.cover.url }}" class="album__track_cover" alt="">
+        <audio controls>
+            <source src="{{ item.file.url }}" type="audio/ogg; codecs=vorbis">
+            <source src="{{ item.file.url }}" type="audio/mpeg">
+            Тег audio не поддерживается вашим браузером.
+            <!--<a href="audio/music.mp3">Скачайте музыку</a>.-->
+        </audio>
+    {% endfor %}
+    </div>
+{% endblock %}

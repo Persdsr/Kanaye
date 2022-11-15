@@ -1,0 +1,28 @@
+.title__center{
+    text-align: center;
+}
+
+.album__block{
+    display: flex;
+    justify-content: center;
+}
+
+.album__block_content{
+
+}
+
+.album_cover{
+    height: 500px;
+    width: 600px;
+}
+
+.album__track_cover{
+    width: 400px;
+    height: 300px;
+}
+
+.block__tracks{
+    height: 100%;
+    width: 1200px
+
+}
