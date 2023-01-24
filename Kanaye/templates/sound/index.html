@@ -4,7 +4,7 @@
 
 
 {% block content %}
-{% for track in tracks %}
+    {% for track in tracks %}
     <h2>{{ track.title }}</h2>
     <img src="{{ track.cover.url }}" width="400" height="300" alt="">
     <audio controls>
@@ -14,4 +14,11 @@
         <!--<a href="audio/music.mp3">Скачайте музыку</a>.-->
     </audio>
 {% endfor %}
+
+    {% if all_items %}
+        {% for item in all_items %}
+            <img src="{{ item }}" alt="">
+        {% endfor %}
+    {% endif %}
+
 {% endblock %}

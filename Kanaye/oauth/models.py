@@ -17,7 +17,7 @@ class AuthUser(AbstractUser):
     country = models.CharField(verbose_name='Страна', max_length=20, blank=True)
     city = models.CharField(verbose_name='Город', max_length=20, blank=True)
 
-    instagram = models.URLField(verbose_name='Инста', blank=True)
+    vk = models.URLField(verbose_name='Вконтакте', blank=True)
     youtube = models.URLField(verbose_name='Ютуб', blank=True)
     twitter = models.URLField(verbose_name='Твитер', blank=True)
 
